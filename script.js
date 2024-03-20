@@ -90,10 +90,15 @@ numberNine.addEventListener("click", () => {
     updateDisplay();
 });
 
+// zero button - check we are not dividing by zero
 const numberZero = document.querySelector('#b0');
 numberZero.addEventListener("click", () => {
-    display = display + "0";
-    updateDisplay();
+    if (display.endsWith() === "/") {
+        display = display + "0";
+        updateDisplay();
+    } else {
+        alert("You cannot divide by zero! Please try again.);
+    }
 });
 
 const addition = document.querySelector('#add');
