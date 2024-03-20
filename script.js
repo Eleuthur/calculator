@@ -21,13 +21,13 @@ let operator = "";
 function operate(op) {
     switch (op) {
     case "+":
-        return(add(parseInt(firstNumber), parseInt(secondNumber)));
+        return(add(parseFloat(firstNumber), parseFloat(secondNumber)));
     case "-":
-        return(subtract(parseInt(irstNumber), parseInt(secondNumber)));
+        return(subtract(parseFloat(irstNumber), parseFloat(secondNumber)));
     case "*":
-        return(multiply(parseInt(firstNumber), parseInt(secondNumber)));
+        return(multiply(parseFloat(firstNumber), parseFloat(secondNumber)));
     case "/":
-        return(divide(parseInt(firstNumber), parseInt(secondNumber)));
+        return(divide(parseFloat(firstNumber), parseFloat(secondNumber)));
     };
 
 };
@@ -97,7 +97,15 @@ numberZero.addEventListener("click", () => {
         display = display + "0";
         updateDisplay();
     } else {
-        alert("You cannot divide by zero! Please try again.);
+        alert("You cannot divide by zero! Please try again.");
+    }
+});
+
+const decimal = document.querySelector('#decimal');
+decimal.addEventListener("click", () => {
+    if (!display.includes(".")) {
+        display = display + ".";
+        updateDisplay();
     }
 });
 
@@ -150,6 +158,7 @@ function calculate() {
     let equationArray = display.split(' ');
     let newNumber = 0;
     while (equationArray.length > 1) {
+        console.table(equationArray);
         firstNumber = equationArray[0];
         equationArray.shift();
         operator = equationArray[0];
@@ -157,7 +166,9 @@ function calculate() {
         secondNumber = equationArray[0];
         equationArray.shift();
         newNumber = operate(operator);
+        console.table(equationArray);
         equationArray.unshift(newNumber);
+        console.table(equationArray);
     };
     equationArray[0] = equationArray[0].toFixed(3);
     display = equationArray.toString();
