@@ -148,6 +148,13 @@ clear.addEventListener("click", () => {
     updateDisplay();
 });
 
+//remove last character from the input string
+const backspace = document.querySelector('#backspaceButton');
+backspace.addEventListener("click", () => {
+    display = display.substring(0, display.length - 1);
+    updateDisplay();
+});
+
 //update the display of the calulator
 function updateDisplay() {
     const displayText = document.querySelector('#display p');
