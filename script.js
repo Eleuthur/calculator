@@ -21,23 +21,21 @@ let operator = "";
 function operate(op) {
     switch (op) {
     case "+":
-        add(firstNumber, secondNumber);
-        break;
+        return(add(parseInt(firstNumber), parseInt(secondNumber)));
     case "-":
-        subtract(firstNumber, secondNumber);
-        break;
+        return(subtract(parseInt(irstNumber), parseInt(secondNumber)));
     case "*":
-        multiply(firstNumber, secondNumber);
-        break;
+        return(multiply(parseInt(firstNumber), parseInt(secondNumber)));
     case "/":
-        divide(firstNumber, secondNumber);
-        break;
+        return(divide(parseInt(firstNumber), parseInt(secondNumber)));
     };
 
 };
 
 let display = "";
 
+//event listeners for all buttons
+//after each click update the display
 const numberOne = document.querySelector('#b1');
 numberOne.addEventListener("click", () => {
     display = display + "1";
@@ -137,13 +135,26 @@ clear.addEventListener("click", () => {
     updateDisplay();
 });
 
+//update the display of the calulator
 function updateDisplay() {
     const displayText = document.querySelector('#display p');
     displayText.textContent = display;
 };
 
 function calculate() {
-   const equationArray = display.split(' ');
-   console.table(equationArray);
-   
-}
+    let equationArray = display.split(' ');
+    let newNumber = 0;
+    while (equationArray.length > 1) {
+        firstNumber = equationArray[0];
+        equationArray.shift();
+        operator = equationArray[0];
+        equationArray.shift();
+        secondNumber = equationArray[0];
+        equationArray.shift();
+        newNumber = operate(operator);
+        equationArray.unshift(newNumber);
+    };
+    equationArray[0] = equationArray[0].toFixed(3);
+    display = equationArray.toString();
+    updateDisplay();
+};
