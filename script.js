@@ -101,32 +101,49 @@ numberZero.addEventListener("click", () => {
 const addition = document.querySelector('#add');
 addition.addEventListener("click", () => {
     operator = "+";
-    display = display + "+";
-    updateDisplay()
+    display = display + " + ";
+    updateDisplay();
 });
 
 const subtraction = document.querySelector('#subtract');
 subtraction.addEventListener("click", () => {
     operator = "-";
-    display = display + "-";
-    updateDisplay()
+    display = display + " - ";
+    updateDisplay();
 });
 
 const multiplication = document.querySelector('#multiply');
 multiplication.addEventListener("click", () => {
     operator = "*";
-    display = display + "*";
-    updateDisplay()
+    display = display + " * ";
+    updateDisplay();
 });
 
 const dividing = document.querySelector('#divide');
 dividing.addEventListener("click", () => {
     operator = "/";
-    display = display + "/";
-    updateDisplay()
+    display = display + " / ";
+    updateDisplay();
+});
+
+const equals = document.querySelector('#equalsButton');
+equals.addEventListener("click", () => {
+    calculate();
+});
+
+const clear = document.querySelector('#clearButton');
+clear.addEventListener("click", () => {
+    display = "";
+    updateDisplay();
 });
 
 function updateDisplay() {
     const displayText = document.querySelector('#display p');
     displayText.textContent = display;
 };
+
+function calculate() {
+   const equationArray = display.split(' ');
+   console.table(equationArray);
+   
+}
