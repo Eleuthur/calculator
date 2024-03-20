@@ -5,9 +5,15 @@
     border-radius: 10px;
 }
 
+
+#display p {
+    margin-left: 50px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 #display {
     width: 570px;
-    height: 75px;
     margin: 10px;
     background-color: lightyellow;
     border: 2px solid yellow;
