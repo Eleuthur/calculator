@@ -45,57 +45,85 @@ numberOne.addEventListener("click", () => {
 });
 
 const numberTwo = document.querySelector('#b2');
-numberOne.addEventListener("click", () => {
+numberTwo.addEventListener("click", () => {
     display = display + "2";
     updateDisplay();
 });
 
-const numberOne = document.querySelector('#b3');
-numberOne.addEventListener("click", () => {
+const numberThree = document.querySelector('#b3');
+numberThree.addEventListener("click", () => {
     display = display + "3";
     updateDisplay();
 });
 
-const numberOne = document.querySelector('#b4');
-numberOne.addEventListener("click", () => {
+const numberFour = document.querySelector('#b4');
+numberFour.addEventListener("click", () => {
     display = display + "4";
     updateDisplay();
 });
 
-const numberOne = document.querySelector('#b5');
-numberOne.addEventListener("click", () => {
+const numberFive = document.querySelector('#b5');
+numberFive.addEventListener("click", () => {
     display = display + "5";
     updateDisplay();
 });
 
-const numberOne = document.querySelector('#b6');
-numberOne.addEventListener("click", () => {
+const numberSix = document.querySelector('#b6');
+numberSix.addEventListener("click", () => {
     display = display + "6";
     updateDisplay();
 });
 
-const numberOne = document.querySelector('#b7');
-numberOne.addEventListener("click", () => {
+const numberSeven = document.querySelector('#b7');
+numberSeven.addEventListener("click", () => {
     display = display + "7";
     updateDisplay();
 });
 
-const numberOne = document.querySelector('#b8');
-numberOne.addEventListener("click", () => {
+const numberEight = document.querySelector('#b8');
+numberEight.addEventListener("click", () => {
     display = display + "8";
     updateDisplay();
 });
 
-const numberOne = document.querySelector('#b9');
-numberOne.addEventListener("click", () => {
+const numberNine = document.querySelector('#b9');
+numberNine.addEventListener("click", () => {
     display = display + "9";
     updateDisplay();
 });
 
-const numberOne = document.querySelector('#b0');
-numberOne.addEventListener("click", () => {
+const numberZero = document.querySelector('#b0');
+numberZero.addEventListener("click", () => {
     display = display + "0";
     updateDisplay();
+});
+
+const addition = document.querySelector('#add');
+addition.addEventListener("click", () => {
+    operator = "+";
+    display = display + "+";
+    updateDisplay()
+});
+
+const subtraction = document.querySelector('#subtract');
+subtraction.addEventListener("click", () => {
+    operator = "-";
+    display = display + "-";
+    updateDisplay()
+});
+
+const multiplication = document.querySelector('#multiply');
+multiplication.addEventListener("click", () => {
+    operator = "*";
+    display = display + "*";
+    updateDisplay()
+});
+
+const dividing = document.querySelector('#divide');
+dividing.addEventListener("click", () => {
+    operator = "/";
+    display = display + "/";
+    updateDisplay()
 });
 
 function updateDisplay() {
