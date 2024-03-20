@@ -1,21 +1,49 @@
-.numberButton {
-    width: 175px;
-    height: 50px;
-    margin: 10px;
+#calc-body {
+    background-color: lightgray;
+    border: 1px solid grey;
     border-radius: 10px;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.numberButton {
+    height: 50px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: lightsalmon;
+    font-size: 24px;
+}
+
+.functionButton {
+    height: 50px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: lightblue;
+    font-size: 24px;
+}
+
+#clearButton {
+    width: 300px;
+}
 
 #display p {
     margin-left: 50px;
-    font-size: 24px;
+    font-size: 36px;
     font-family: 'Courier New', Courier, monospace;
+    color: darkgreen;
 }
 
 #display {
-    width: 570px;
     margin: 10px;
-    background-color: lightyellow;
-    border: 2px solid yellow;
+    height: 75px;
+    background-color: lightgreen;
+    border: 2px solid darkgreen;
     border-radius: 10px;
 };
